@@ -533,7 +533,7 @@ https://templatemo.com/tm-597-neural-glass
  .hero-stats {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-     gap: 40px;
+     gap: 0px;
      margin: 60px auto 50px;
      max-width: 640px;
      opacity: 0;
@@ -542,10 +542,12 @@ https://templatemo.com/tm-597-neural-glass
  .hero-stat {
      text-align: center;
      position: relative;
-     padding: 20px;
+    width: 10px;   /* set equal width */
+    height: 10px;
+     padding: 0px;
      background: linear-gradient(135deg, rgba(224, 163, 255, 0.06), rgba(255, 105, 180, 0.04));
      border: 1px solid rgba(224, 163, 255, 0.15);
-     border-radius: 12px;
+     border-radius: 50%;
      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
      backdrop-filter: blur(10px);
 }
@@ -1181,7 +1183,7 @@ https://templatemo.com/tm-597-neural-glass
     }
      .hero-stats {
          grid-template-columns: repeat(2, 1fr);
-         gap: 20px;
+         gap: 10px;
          margin: 40px auto 35px;
     }
      .hero-stat {
@@ -1272,4 +1274,32 @@ https://templatemo.com/tm-597-neural-glass
  ::-webkit-scrollbar-thumb:hover {
      background: linear-gradient(45deg, #ff0080, #8000ff);
      box-shadow: 0 0 15px rgba(255, 0, 128, 0.7);
+}
+
+/* .hover-shake:hover {
+   animation: fa-shake 1s infinite;  
+       transform: translateY(-8px) scale(1.05);
+     border-color: rgba(255, 105, 180, 0.3);
+} */
+
+.hover-grow {
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+.hover-grow:hover {
+  transform: scale(1.2); /* 1.2 = 120% of original size */
+}
+
+.gradient-icon {
+  background: linear-gradient(135deg, #e0a3ff, #ff69b4);
+  -webkit-background-clip: text;   /* for Chrome/Safari */
+  -webkit-text-fill-color: transparent;
+  background-clip: text;           /* for Firefox */
+  color: transparent;              /* fallback */
+}
+
+.hero-stats i {
+  display: flex;          /* make each icon a block inside grid */
+  justify-content: center;
+  align-items: center;
 }
