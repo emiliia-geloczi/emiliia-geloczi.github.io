@@ -532,7 +532,7 @@ https://templatemo.com/tm-597-neural-glass
 }
  .hero-stats {
      display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
      gap: 0px;
      margin: 60px auto 50px;
      max-width: 640px;
@@ -872,7 +872,7 @@ https://templatemo.com/tm-597-neural-glass
      justify-content: flex-end;
      padding-right: 60px;
      position: relative;
-     margin-bottom: 60px;
+     margin-bottom: 10px;
 }
  .timeline-item:nth-child(even) {
      justify-content: flex-start;
@@ -880,8 +880,9 @@ https://templatemo.com/tm-597-neural-glass
      padding-right: 0;
 }
  .timeline-content {
-     max-width: 450px;
-     padding: 50px 40px;
+     max-width: 460px;
+     min-width: 460px;
+     padding: 40px 40px;
      position: relative;
      transform: perspective(1000px) rotateY(-5deg);
      transition: all 0.4s ease;
@@ -922,14 +923,99 @@ https://templatemo.com/tm-597-neural-glass
  .timeline-content h4 {
      font-size: 1.5rem;
      color: #ffffff;
-     margin-bottom: 20px;
+     margin-bottom: 0px;
      font-weight: 600;
 }
  .timeline-content p {
      color: #d1d1d1;
      line-height: 1.7;
      font-size: 1rem;
+     margin-top: 20px;
 }
+
+
+/* Section 5: Publications */
+
+
+
+.publications {
+  display: flex;
+  max-width: 1200px;
+  flex-direction: column;
+  gap: 20px; 
+  margin: 0 auto;   
+  padding: 0 20px;
+}
+
+
+
+/* numbered list */
+.pub-list {
+  list-style: none;   /* numbers 1, 2, 3 */
+  padding-left: 20px;    /* indentation for numbers */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;             /* spacing between publications */
+  counter-reset: pub;
+  margin-bottom: 70px;
+}
+
+.pub-list li {
+    display: flex;
+  padding: 15px;
+  align-items: center;   /* vertical centering */
+  counter-increment: pub;
+    /* border: 1px solid rgba(224, 163, 255, 0.15); */
+  border-radius: 25px;
+/* box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1); */
+/* background: rgba(30, 10, 41, 0.859); */
+     backdrop-filter: blur(25px);
+     /* transform: perspective(1000px) rotateY(-5deg); */
+transition: all 0.4s ease;
+}
+
+.pub-list li::before {
+  content: counter(pub);        /* show number */
+  font-size: 2.5rem;            /* make it big */
+  font-weight: bold;
+  margin-right: 20px;
+  color: #e0a3ff;               /* or gradient like your logo */
+  flex-shrink: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+ .pub-list li:hover {
+     box-shadow: 0 25px 60px rgba(224, 163, 255, 0.2), 0 0 0 1px rgba(224, 163, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+     border-color: rgba(224, 163, 255, 0.3);
+}
+
+.pub-content {
+  flex: 1; /* content takes the rest of the width */
+}
+/* buttons */
+.pub-buttons {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.pub-buttons .btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  background: linear-gradient(135deg, #e0a3ff, #ff69b4);
+  color: white;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.pub-buttons .btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 /* Section 5: Contact */
  .contact {
      padding: 150px 0;
@@ -1303,3 +1389,15 @@ https://templatemo.com/tm-597-neural-glass
   justify-content: center;
   align-items: center;
 }
+
+.hero-stats a {
+  text-decoration: none; /* remove underline */
+}
+
+ul {
+  list-style-type: disc;   /* default: solid bullets */
+  padding-left: 20px;      /* controls indentation */
+}
+
+
+
