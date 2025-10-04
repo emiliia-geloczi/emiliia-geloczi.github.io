@@ -1015,6 +1015,8 @@ transition: all 0.4s ease;
   padding: 6px 12px;
   border-radius: 6px;
   text-decoration: none;
+   width: 100px;
+   text-align: center;
   font-size: 0.9em;
   font-weight: 500;
   background: linear-gradient(135deg, #e0a3ff, #ff69b4);
