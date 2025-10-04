@@ -532,7 +532,7 @@ https://templatemo.com/tm-597-neural-glass
 }
  .hero-stats {
      display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
      gap: 0px;
      margin: 60px auto 50px;
      max-width: 640px;
@@ -658,7 +658,13 @@ https://templatemo.com/tm-597-neural-glass
      text-align: center;
      font-size: clamp(2.5rem, 6vw, 4rem);
      margin-bottom: 80px;
-     color: #00ffff;
+     
+     background: linear-gradient(135deg, #e0a3ff 0%, #ff69b4 30%, #00ffff 60%, #e0a3ff 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: modernGradient 8s ease infinite;
      position: relative;
 }
  .section-title::after {
@@ -927,7 +933,7 @@ https://templatemo.com/tm-597-neural-glass
      font-weight: 600;
 }
  .timeline-content p {
-     color: #d1d1d1;
+     color: #e0a3ff;
      line-height: 1.7;
      font-size: 1rem;
      margin-top: 20px;
@@ -983,6 +989,11 @@ transition: all 0.4s ease;
   flex-shrink: 0;
   text-align: center;
   line-height: 1;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2ch;    /* space for up to 3 digits */
 }
 
  .pub-list li:hover {
