@@ -1413,4 +1413,9 @@ ul {
 }
 
 
-
+.btn.disabled {
+  background-color: #ccc;
+  color: #614c5e;
+  cursor: not-allowed;
+  pointer-events: none; /* makes it unclickable */
+}
